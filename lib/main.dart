@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -50,17 +51,156 @@ class MyApp extends StatelessWidget {
               colors: [Colors.grey.shade700, Colors.grey[800], Colors.grey[850], Colors.grey[900]], // whitish to gray
             ),
           ),
-          child: Center(
-            child: Text(
-              'Welcome to India',
-              style: TextStyle(
-                fontSize: 35,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          child: ListView(
+            children: [
+              calculationHistory,
+              calcText,
+              numbersContainer,
+            ],
+          )
         ),
       ),
     );
   }
+
+  Widget calculationHistory = Container(
+    margin: EdgeInsets.only(top: 10.0),
+    padding: EdgeInsets.only(right: 10),
+    height: 150,
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Text(
+          'Kandersteg, Switzerland',
+          style: TextStyle(
+            color: Colors.grey[500],
+          ),
+        ),
+      ],
+    ),
+  );
+
+  Widget calcText = Container(
+    padding: EdgeInsets.only(right: 10),
+    child: Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Text(
+          '100002000',
+          style: TextStyle(
+            fontSize: 48,
+            color: Colors.grey[500],
+          ),
+        ),
+      ],
+    ),
+  );
+
+  Widget numbersContainer = Container(
+    margin: EdgeInsets.only(left: 10),
+    child: Row(
+      children: [
+        Column(
+          children: [
+            RaisedButton(
+              onPressed: () {
+
+              },
+              child: Text(
+                '1'
+              ),
+            ),
+            RaisedButton(
+
+              onPressed: () {
+
+              },
+              child: Text(
+                  '2'
+              ),
+
+            ),
+            RaisedButton(
+
+              onPressed: () {
+
+              },
+              child: Text(
+                  '3'
+              ),
+
+            )
+          ],
+        ),
+        Column(
+          children: [
+            RaisedButton(
+              onPressed: () {
+
+              },
+              child: Text(
+                  '4'
+              ),
+            ),
+            RaisedButton(
+
+              onPressed: () {
+
+              },
+              child: Text(
+                  '5'
+              ),
+
+            ),
+            RaisedButton(
+
+              onPressed: () {
+
+              },
+              child: Text(
+                  '6'
+              ),
+
+            )
+          ],
+        ),
+        Column(
+          children: [
+            RaisedButton(
+              onPressed: () {
+
+              },
+              child: Text(
+                  '7'
+              ),
+            ),
+            RaisedButton(
+
+              onPressed: () {
+
+              },
+              child: Text(
+                  '8'
+              ),
+
+            ),
+            RaisedButton(
+
+              onPressed: () {
+
+              },
+              child: Text(
+                  '9'
+              ),
+
+            )
+          ],
+        ),
+      ],
+    ),
+
+  );
 }
