@@ -106,6 +106,10 @@ class MyApp extends StatelessWidget {
         Column(
           children: [
             RaisedButton(
+              shape: CircleBorder(
+                    side: BorderSide(color: Colors.red)
+              ),
+              color: Colors.red.shade50,
               onPressed: () {
 
               },
